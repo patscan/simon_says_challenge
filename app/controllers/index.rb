@@ -9,4 +9,10 @@ post '/color' do
 
   cell= rand(1..9)
   color= "#" + "%06x" % (rand * 0xffffff)
+
+
+  # return [cell, color].to_json
+
+  data = {:cell => cell, :color => color}.to_json
+  return data
 end
